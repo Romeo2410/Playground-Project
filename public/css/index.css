@@ -1,0 +1,27 @@
+body{
+    background-color:#7ED4AD;
+}
+#Feed{
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: azure;
+    text-align: center;
+}
+.k{
+    transition: ease all 1s;
+}
+.k:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: ease all 1s;
+}
+#nav,#os,#as,#ru{
+    background-color: bisque;
+}
+.alert1{
+    color: green;
+}
+.alert2{
+    color: red;
+}
