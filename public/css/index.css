@@ -1,11 +1,11 @@
 body{
-    background-color:#7ED4AD;
+    background-color:black;
 }
 #Feed{
     color: black;
     font-size: 25px;
     font-weight: 500;
-    background-color: azure;
+    background-color:#ffc107;
     text-align: center;
 }
 .k{
@@ -17,7 +17,7 @@ body{
     transition: ease all 1s;
 }
 #nav,#os,#as,#ru{
-    background-color: bisque;
+    background-color:#ffc107;
 }
 .alert1{
     color: green;
