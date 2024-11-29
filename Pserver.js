@@ -530,7 +530,7 @@ ctp.post("/SendFeedback",function (req,resp){
     var num=req.body.Cont;
 //  email content
 var subject = "Feedback from "+Fname ;
-var message ="<h1>Feedback</h1>"+feed+"<b>Contact</b>"+num;
+var message ="<h1>Feedback</h1>"+feed;"<br>"+"<b>Contact</b>"+num;
 // Send email
 transporter.sendMail({
     to: "bcacs2021155@gmail.com",
