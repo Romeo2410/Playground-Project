@@ -67,8 +67,9 @@
       })
       $("#FeedBtn").click(function(){
         var FN=$("#feedname").val();
-        if(FN===""){
-          alert("Please Enter Your name to send Feedback");
+        var Cn=$("#Cont").val();
+        if(FN===""||Cn===""){
+          alert("Please Enter Name and Contact to send Feedback");
           return false;
         }
       })
@@ -254,7 +255,7 @@
       </div>
     </nav>
 <!-- Crousel -->
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleAutoplaying" class="carousel slide pb-5" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="Images/Crousel Image 3.jpg" class="d-block w-100" alt="...">
@@ -276,8 +277,8 @@
   </button>
 </div>
 <!-- OUR SERVICES -->
- <center><h2 id="os">Our Services</h2></center>
- <div class="container">
+ <center><h2 id="os" class="p-2 fw-bold">Our Services</h2></center>
+ <div class="container py-5">
   <div class="row lg-3">
   <div class="card col-md-3 k">
   <img src="Images/Publish tournaments.jpg" class="card-img-top" alt="...">
@@ -310,8 +311,8 @@
 </div>
 </div>
 <!-- Our Team -->
-<center><h2 id="as">Our Team</h2></center>
-<div class="container">
+<center><h2 id="as" class="p-2 fw-bold">Our Team</h2></center>
+<div class="container py-5">
   <div class="row">
     <div class="card mb-3 k col-md-6">
       <div class="row g-0">
@@ -346,22 +347,29 @@
 </div>
 </div>
 <!-- Reach Us  -->
- <center><h2 id="ru">Reach Us</h2></center>
- <div class="container">
+ <center><h2 id="ru" class="p-2 fw-bold">Reach Us</h2></center>
+ <div class="container py-5">
   <div class="row">
   <div class="col-md-6 " >
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3447.8807436668044!2d74.952328!3d30.211951000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391732a4f07278a9%3A0x4a0d6293513f98ce!2sBanglore%20Computer%20Education!5e0!3m2!1sen!2sin!4v1731817245166!5m2!1sen!2sin" 
   width="450" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<div class="col-md-5">
-  <form method="post">
-  <p id="Feed">Mail Your Queries/Feedback</p>
-  <div class="input-group mb-2">
-    <span class="input-group-text">Your Name</span>
-    <input type="text" id="feedname" name="feedname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+<div class="col-md-5 bg-warning pb-4">
+  <form method="post" class="px-4">
+  <p id="Feed" class="mt-4 py-2">Mail Your Queries/Feedback</p>
+  <div class="col-md-12 pb-4">
+    <label for="Name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="feedname" name="feedname">
   </div>
-  <textarea rows="19" cols="59" name="Feedback" id="Feedback"></textarea>
-  <button type="submit" class="btn btn-warning" formaction="/SendFeedback" id="FeedBtn">Send Feedback</button>
+  <div class="col-md-12 pb-4">
+    <label for="Contact" class="form-label">Contact</label>
+    <input type="text" class="form-control" id="Cont" name="Cont">
+  </div>
+  <div class="form pb-4">
+    <label for="floatingTextarea" class="form-label">Feedback</label>
+    <textarea class="form-control" rows="6" placeholder="Send your Feedback Here" id="floatingTextarea" name="Feedback"></textarea>
+  </div>
+  <button type="submit" class="btn" formaction="/SendFeedback" id="FeedBtn">Send Feedback</button>
 </form>
 </div>
 </div>
@@ -369,14 +377,14 @@
 <!-- Footer -->
 <footer>
   <hr class="text-light">
-  <div class="container text-warning" id="foot">
+  <div class="container text-warning pt-5" id="foot">
       <div class="row">
       <div class="col-md-3">
           <h2 class="text-light">PlayGround</h2>
           <div class="pb-2 pt-3">
           <h5 class="text-light">Contact Us</h5>
-          <a href="" class="text-warning">6239110015</a><br>
-          <a href="" class="text-warning">gurrupak24@gmail.com</a>
+          <a href="" class="text-warning">tel:6239110015</a><br>
+          <a href="" class="text-warning">mailto:gurrupak24@gmail.com</a>
           <p>Green Avenue|Bathinda|151001</p>
           </div>
           <div class="pb-3">

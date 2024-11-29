@@ -2,10 +2,10 @@ body{
     background-color:black;
 }
 #Feed{
-    color: black;
+    color: white;
     font-size: 25px;
     font-weight: 500;
-    background-color:#ffc107;
+    background-color:black;
     text-align: center;
 }
 .k{
@@ -26,5 +26,9 @@ body{
     color: red;
 }
 #foot{
+    background-color: black;
+}
+#FeedBtn{
+    color: white;
     background-color: black;
 }

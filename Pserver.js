@@ -527,9 +527,11 @@ mysqlServer.query("select * from players where emailid=?",[email],function(err,j
 ctp.post("/SendFeedback",function (req,resp){
     var Fname=req.body.feedname;
     var feed=req.body.Feedback;
+    var num=req.body.Cont;
 //  email content
 var subject = "Feedback from "+Fname ;
 var message = "<h1>Feedback</h1>"+feed;
+var message ="<b>Contact</b>"+num;
 // Send email
 transporter.sendMail({
     to: "bcacs2021155@gmail.com",
