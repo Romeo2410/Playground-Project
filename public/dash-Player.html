@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Player Dashboasrd</title>
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f868df920b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/index.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function(){
@@ -57,31 +57,31 @@
             </div>
           </nav>
     <div class="container pb-5">
-      <center><h1>Player Dashboard</h1></center>
-      <center><p>Welcome : <span id="activeUserP"></span></p></center>
+      <center><h1 class="mt-4 p-1">Player Dashboard</h1></center>
+      <center><p class="mt-3">Welcome : <span id="activeUserP"></span></p></center>
       <div class="row">
-    <div class="card col-md-3" >
+    <div class="card col-md-3">
         <img src="Images/Profile.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="player-details.html" class="btn btn-primary">Profile</a>
+          <a href="player-details.html" class="btn btn-dark">Profile</a>
         </div>
       </div>
       <div class="card col-md-3" >
         <img src="Images/Post-Tournaments.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="tournaments-finder.html" class="btn btn-primary">Find Tournaments</a>
+          <a href="tournaments-finder.html" class="btn btn-warning">Find Tournaments</a>
         </div>
       </div>
       <div class="card col-md-3">
         <img src="Images/Settings-logo.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Settings">Settings</button>
+          <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Settings">Settings</button>
         </div>
       </div>
       <div class="card col-md-3" >
         <img src="Images/Logout.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="#" class="btn btn-primary" id="LogoutP">Logout</a>
+          <a href="#" class="btn btn-warning" id="LogoutP">Logout</a>
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@
           
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="UpdatePwd">Save changes</button>
+              <button type="button" class="btn btn-warning" id="UpdatePwd">Save changes</button>
             </div>
           </div>
         </div>
