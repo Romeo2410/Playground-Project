@@ -50,8 +50,8 @@
  </script> 
   </head>
   <body>
-    <div class="row col-12">
-      <center><h2>Player's Profile</h2></center>
+    <div class="col-md-12">
+      <center><h2 class="text-warning bg-black p-3">Player's Profile</h2></center>
     </div>
     <div class="container">
     <form class="row g-3" enctype="multipart/form-data" method="post">
@@ -60,7 +60,7 @@
           <input type="email" class="form-control" id="inputEmail" name="inputEmail">
         </div>
         <div class="col-md-6">
-            <button type="button" class="btn btn-outline-info mt-4" id="Fetchbtn">Search</button>
+            <button type="button" class="btn btn-outline-warning" style="margin-top: 30px;" id="Fetchbtn">Search</button>
         </div>
         <div class="col-4">
             <label for="inputOrgName" class="form-label">Name</label>
@@ -112,10 +112,10 @@
             <textarea name="PrevsText" id="PrevsText" class="form-control"></textarea>
           </div>
           <div class="col-6">
-            <button type="submit" class="btn btn-primary" formaction="/Send-T-Server">Send to Server</button>
+            <button type="submit" class="btn btn-warning" formaction="/Send-T-Server">Send to Server</button>
           </div>
           <div class="col-6">
-            <button type="submit" class="btn btn-primary" formaction="/Modify-Details">Modify</button>
+            <button type="submit" class="btn btn-warning" formaction="/Modify-Details">Modify</button>
           </div>
         </div>
     </form>
