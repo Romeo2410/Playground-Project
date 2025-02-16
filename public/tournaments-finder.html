@@ -90,7 +90,7 @@
    <center>
   <body ng-app="kuchModule" ng-controller="kuchController" ng-init="doFetchgame(); doFetchcity();">
     <div class="row col-12">
-      <h2>Find Tournaments</h2>
+      <h2 class="bg-black text-warning p-3">Find Tournaments</h2>
     </div>
     <div class="container row lg-3">
     <div class="col-md-6">
@@ -113,8 +113,8 @@
     </div>
   </div><br><br>
     <center>
-      <button type="button" ng-click="doFetchP();" class="btn btn-success">Fetch Acc. City & Game</button>
-      <button type="button" ng-click="doFetchAll();" class="btn btn-danger">Fetch All Records</button>
+      <button type="button" ng-click="doFetchP();" class="btn btn-warning">Fetch Acc. City & Game</button>
+      <button type="button" ng-click="doFetchAll();" class="btn btn-warning">Fetch All Records</button>
     </center>
     <hr>
       <div class="container">
@@ -127,7 +127,7 @@
                 <h5 class="card-title">{{boxObj.Game}}</h5>
                 <h5 class="card-title">{{boxObj.City}}</h5>
 
-                <a href="" ng-click="doFetchOne($index);" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">More info</a>
+                <a href="" ng-click="doFetchOne($index);" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">More info</a>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Details</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tournament Details</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
