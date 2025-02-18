@@ -369,11 +369,11 @@ ctp.get("/UpPass",function(req,resp){
     console.log(pass);
     var NewPass=req.query.NewPwd;
     console.log(NewPass);
-    mysqlServer.query("update users set pwd=? where emailid=? and pwd=?",[NewPass,email,pass],function(err){
-        if(resp.affectedRows==1) 
-            resp.send("updated");
+    mysqlServer.query("update users set pwd=? where emailid=? and pwd=?",[NewPass,email,pass],function(err,respo){
+        if(respo.affectedRows==1) 
+            resp.send("Password updated");
         else 
-        resp.send("Pass Changed");
+        resp.send("Sorry Try Again");
     })
 })
 // Player Details 

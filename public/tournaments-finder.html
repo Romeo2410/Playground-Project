@@ -116,11 +116,11 @@
       <button type="button" ng-click="doFetchP();" class="btn btn-warning">Fetch Acc. City & Game</button>
       <button type="button" ng-click="doFetchAll();" class="btn btn-warning">Fetch All Records</button>
     </center>
-    <hr>
+    <br>
       <div class="container">
         <div class="row">
           <div class="col-md-3" ng-repeat="boxObj  in jsonArray" >
-            <div class="card">
+            <div class="card mt-4">
              <center> <img src="{{boxObj.Poster}}" width="100" height="100"  alt="..."></center>
               <div class="card-body">
                 <h5>{{boxObj.emailid}}</h5>
@@ -191,5 +191,54 @@
     </div>
   </div>
 </div>
+<br><br>
+<footer class="bg-black">
+  <hr class="text-light">
+  <div class="container text-warning pt-5" id="foot">
+      <div class="row">
+      <div class="col-md-3">
+          <h2 class="text-light">PlayGround</h2>
+          <div class="pb-2 pt-3">
+          <h5 class="text-light" id="Conus">Contact Us</h5>
+          <a href="tel:6239110015" class="text-warning">6239110015</a><br>
+          <a href="mailto:gurrupak24@gmail.com" class="text-warning">gurrupak24@gmail.com</a>
+          <p>Green Avenue|Bathinda|151001</p>
+          </div>
+          <div class="pb-3">
+          <a href="https://x.com/rupak_gur" target="_blank"><i class="text-warning fa-brands fa-x-twitter fa-2xl"></i></a>
+          <a href="https://www.instagram.com/rupakgurrr" target="_blank"><i class="text-warning fa-brands fa-instagram fa-2xl ps-2"></i></a>
+          <a href="https://www.linkedin.com/in/rupak-gur-852916307" target="_blank"><i class="text-warning fa-brands fa-linkedin-in fa-2xl ps-2"></i></a>
+          <a href="https://github.com/Romeo2410" target="_blank"><i class="text-warning fa-brands fa-github fa-2xl ps-2"></i></a>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <h5 class="text-light">Menu</h5>
+          <p class="text-warning">Home</p>
+          <p class="text-warning">Services</p>
+          <p class="text-warning">About</p>
+          <p class="text-warning">Contact</p>
+      </div>
+      <div class="col-md-3">
+          <h5 class="text-light">Our Services</h5>
+          <p>Publish Tournaments</p>
+          <p>Upcoming Tournaments</p>
+          <p>Win Prizes</p>
+          <p>Certification</p>
+      </div>
+      <div class="col-md-3">
+        <h5 class="text-light">Our Vision</h5>
+        <p>"To be the leading platform where gamers of all levels can easily 
+          discover, join, and host exciting tournaments, making up a vibrant and 
+          inclusive community of competitive players."
+        </p>
+      </div>
+  </div>
+  </div>
+  <div class="col-md-12">
+    <div class="container text-center">
+    <p class="text-center text-light">© 2024 PlayGround, Inc</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
