@@ -58,6 +58,12 @@ ctp.get("/player-details",function(req,resp){
     let path5=__dirname+"/public/player-details.html"
     resp.sendFile(path5);
 });
+
+
+ctp.get("/admin",function(req,resp){
+    let path5=__dirname+"/public/Bck-res.html"
+    resp.sendFile(path5);
+});
 //------------Database
 ctp.get("/Signup",function(req,resp){
    // console.log(resp.query);
@@ -96,11 +102,11 @@ ctp.get("/check-user",function(req,resp)
 ctp.get("/Login", function(req, resp) {
     let email = req.query.txtLogemail;
     let pwd = req.query.txtLogpwd;
-    mysqlServer.query("SELECT * FROM users WHERE emailid = ? AND pwd = ?", [email, pwd], function(err, jsonArray) {
+    mysqlServer.query("SELECT * FROM users WHERE emailid = ?  and pwd = ? and status=1", [email, pwd], function(err, jsonArray) {
         console.log("Email:", email);
 
         // Check if user is found
-        if (jsonArray.length === 1) 
+        if (jsonArray.length ==1) 
             {
             // Respond with user type and status
             resp.send(jsonArray[0]["utype"]);
@@ -539,4 +545,56 @@ transporter.sendMail({
 })
     console.log("Email sent");
     resp.send("Feedback sent successfully!");
+})
+
+//=============angular Ajax===============================
+ctp.get("/all-records",function(req,resp)
+{
+    mysqlServer.query("select * from users",function(err,result)
+    {
+        if(err==null)
+        {
+         resp.send(result);
+        }
+        else
+        resp.send(err.message);
+    })
+})
+
+
+ctp.get("/doBlock",function(req,resp)
+{
+    let userMail=req.query.emailKuch;
+    //col name Same as  table col name
+    mysqlServer.query("update users set status=0 where emailid=?",[userMail],function(err,result)
+    {
+        if(err==null)
+        {
+            if(result.affectedRows==1)
+            resp.send("Status block Successfulllyyyy");
+            else
+            resp.send("Invalid User Id");
+        }
+        else
+        resp.send(err.message);
+    })
+})
+
+//-----------RESUME USER---------------------------
+ctp.get("/Resume",function(req,resp)
+{
+    let userMail=req.query.emailKuch;
+                                                  //col name Same as  table col name
+    mysqlServer.query("update users set status=1 where emailid=?",[userMail],function(err,result)
+    {
+        if(err==null)
+        {
+            if(result.affectedRows==1)
+            resp.send("Status Resume Successfulllyyyy");
+            else
+            resp.send("Invalid User Id");
+        }
+        else
+        resp.send(err.message);
+    })
 })
